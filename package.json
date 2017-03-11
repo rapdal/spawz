@@ -1,0 +1,14 @@
+{
+  "name": "dogquiz",
+  "version": "1.0.0",
+  "description": "Dog Quiz App",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "http-server"
+  },
+  "author": "Rad Apdal",
+  "license": "ISC",
+  "dependencies": {
+    "httpdispatcher": "^2.0.1"
+  }
+}
