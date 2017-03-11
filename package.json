@@ -1,5 +1,5 @@
 {
-  "name": "dogquiz",
+  "name": "spawz",
   "version": "1.0.0",
   "description": "Dog Quiz App",
   "main": "server/index.js",
@@ -9,6 +9,7 @@
   "author": "Rad Apdal",
   "license": "ISC",
   "dependencies": {
+    "http-server": "^0.9.0",
     "httpdispatcher": "^2.0.1"
   }
 }
