@@ -7,7 +7,7 @@ var loadState = {
 		game.load.image('bgtf1', 'assets/bg-tf-1.png');
 		game.load.image('bgyn1', 'assets/bg-yn-1.png');
 
-		game.load.json('questions', '../../assets/questions.json?v=1');
+		game.load.json('questions', '../../assets/questions.json?v=2');
 	},
 
 	create: function () {		

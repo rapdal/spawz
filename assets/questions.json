@@ -25,18 +25,21 @@
 		"completed": false,
 		"type": "tf",
 		"question": "True?",
+		"choices": ["True", "False"],
 		"answer": "True"
 	},
 	{
 		"completed": false,
 		"type": "tf",
 		"question": "False?",
+		"choices": ["True", "False"],
 		"answer": "False"
 	},
 	{
 		"completed": false,
 		"type": "yn",
 		"question": "Yes?",
+		"choices": ["Yes", "No"],
 		"answer": "Yes"
 	}
 ]
