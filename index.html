@@ -46,7 +46,8 @@ var timer;
 var name;
 var score;
 var scoreText;
-var highscores = {};
+var life = 3;
+
 var getHighscores = false;
 
 var gameWidth = 414;
@@ -54,6 +55,10 @@ var gameHeight = 736;
 
 var color1 = "0x3c2415";
 var color2 = "0xc49a6c";
+
+var questionsJSON;
+var questionIndex;
+var QAgroup;
 
 var questionPanel = {       
     x: 0,

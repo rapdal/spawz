@@ -1,0 +1,42 @@
+[
+	{
+		"completed": false,
+		"type": "mc",
+		"question": "What?",
+		"choices": {
+			"A": "x",
+			"B": "y",
+			"C": "z"
+		},
+		"answer": "A"
+	},
+	{
+		"completed": false,
+		"type": "mc",
+		"question": "When?",
+		"choices": {
+			"A": "x",
+			"B": "y",
+			"C": "z"
+		},
+		"answer": "A"
+	},
+	{
+		"completed": false,
+		"type": "tf",
+		"question": "True?",
+		"answer": "True"
+	},
+	{
+		"completed": false,
+		"type": "tf",
+		"question": "False?",
+		"answer": "False"
+	},
+	{
+		"completed": false,
+		"type": "yn",
+		"question": "Yes?",
+		"answer": "Yes"
+	}
+]
