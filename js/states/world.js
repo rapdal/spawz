@@ -1,6 +1,6 @@
 				
 var worldState = {
-	create: function () {			
+	create: function() {			
 		questionPanel = {       
 		    x: (game.world.width * 0.15),
 		    y: (game.world.height * 0.25),
@@ -15,12 +15,25 @@ var worldState = {
 		background = game.add.sprite(0, 0, "bgmc1");
 		background.width = 	game.width;
 		background.height = game.height;
-		
-		this.generateQuestion();	
+
+		var graphics = game.add.graphics(0, 0);	
+		graphics.beginFill(color1, 1);
+		graphics.drawRect(0, 0, game.width, 50);
+
+		menuGroup = game.add.group();
+		playerLifeSprite = game.add.sprite(game.world.top+10, 10, 'life'+playerLife);
+		playerScoreText = game.add.text(game.world.right - 50, 10, playerScore,
+	    	{ font:'26px Arial', fontWeight:'bolder', fill:'#fff' });
+
+		menuGroup.add(playerLifeSprite);
+		menuGroup.add(playerScoreText);
+				
+		this.generateQA();	
 	},	
 
 	update: function() {	
 		game.world.bringToTop(QAgroup);
+		game.world.bringToTop(menuGroup);
 	},	
 
 	restart: function () {		
@@ -34,19 +47,17 @@ var worldState = {
 	  	return Math.floor(Math.random() * (max - min)) + min;
 	},
 
-	generateQuestion: function() {
-		QAgroup = game.add.group();
+	generateQA: function() {		
+		QAgroup = game.add.group();	
 		questionIndex = this.getRandomInt(0, questionsJSON.length);		
 		this.addQuestion(questionsJSON[questionIndex]);	
 	},
 
 	addQuestion: function(item) {			
-		var graphics = game.add.graphics(0, 0);		
+		var graphics = game.add.graphics(0, 0);			
 
-		graphics.beginFill(color1, 1);
-		graphics.drawRect(0, 0, game.width, 50);
-
-		graphics.beginFill(color2, 1);
+		graphics.lineStyle(5, color1);
+		graphics.beginFill(color2, 5);
 	    graphics.drawRoundedRect(
 	    	questionPanel.x, 
 	    	questionPanel.y, 
@@ -128,14 +139,14 @@ var worldState = {
 	addTwoChoices: function(choice, num) {			
 		var graphics = game.add.graphics(0, 0);		
 
-		var circleDiameter = 130;	
+		var circleDiameter = 125;	
 		var circleRadius = circleDiameter / 2;
 		var answerDistance = circleDiameter + 25;
 				
 	    var circleX = questionPanel.x + 70 + (answerDistance * num);
 	    var circleY = (questionPanel.y + questionPanel.height + 110);		    
    		    
-	    graphics.lineStyle(3, color1);
+	    graphics.lineStyle(10, color1);
 	    graphics.beginFill(color2, 1);
 	    graphics.drawCircle(circleX, circleY, circleDiameter);
 	    graphics.endFill();	 
@@ -148,30 +159,42 @@ var worldState = {
 
 	    QAgroup.add(graphics);
 
-	     var keyText = game.add.text(0, 0, choice,
+	    var keyText = game.add.text(0, 0, choice,
 	    	{ font:'26px Arial', fontWeight:'bolder', fill:"#fff", boundsAlignH:'center', boundsAlignV:'middle', align:'center' });
 	    keyText.setTextBounds(circleX-circleRadius, circleY-circleRadius+2, circleDiameter, circleDiameter);	
 	   
 	    QAgroup.add(keyText);    		   	  
 	},
 
-	checkAnswer: function (answer) {		
+	checkAnswer: function(answer) {		
 		if (questionsJSON[questionIndex].answer == answer) {
-			alert("Correct!");			
+			this.updatePlayerScore();
+			if (questionsJSON.length == 1) {
+				game.state.start('gameover');
+			}
 		}
-		else {
-			alert("Wrong!");
+		else {			
 			playerLife--;
 			if (playerLife < 1) {
 				game.state.start('gameover');
 			}
+			this.updatePlayerLife();
 		}
 
 		this.destroyGraphics(QAgroup);
 
 		questionsJSON.splice(questionIndex, 1);
 
-		this.generateQuestion();	
+		this.generateQA();	
+	},
+
+	updatePlayerScore: function () {
+		playerScore += 10;
+		playerScoreText.setText(playerScore);
+	},
+
+	updatePlayerLife: function () {		
+		playerLifeSprite.loadTexture('life'+playerLife);
 	},
 
 	destroyGraphics: function(group) {		

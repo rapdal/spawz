@@ -1,45 +1,619 @@
 [
-	{
-		"completed": false,
+	{		
 		"type": "mc",
-		"question": "What?",
+		"question": "What does an Avocado have that is poisonous to your dog?",
 		"choices": {
-			"A": "x",
-			"B": "y",
-			"C": "z"
+			"A": "Persin",
+			"B": "Parsin",
+			"C": "Parsen"
 		},
-		"answer": "A"
+		"answer": "A",
+		"caption": ""
 	},
-	{
-		"completed": false,
+	{		
 		"type": "mc",
-		"question": "When?",
+		"question": "What is the smallest dog breed mostly known for?",
 		"choices": {
-			"A": "x",
-			"B": "y",
-			"C": "z"
+			"A": "Chihuahua",
+			"B": "Yorkshire",
+			"C": "Pomeranian"
 		},
-		"answer": "A"
+		"answer": "A",
+		"caption": ""
 	},
-	{
-		"completed": false,
+	{		
+		"type": "mc",
+		"question": "What is the largest dog breed mostly known for?",
+		"choices": {
+			"A": "St. Bernard",
+			"B": "Great Dane",
+			"C": "Husky"
+		},
+		"answer": "B",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "A large dog's resting heart beats how many times per minute?",
+		"choices": {
+			"A": "100-140",
+			"B": "60-100",
+			"C": "60-140"
+		},
+		"answer": "B",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "How many eyelids does a dog have?",
+		"choices": {
+			"A": "2",
+			"B": "3",
+			"C": "4"
+		},
+		"answer": "B",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "How regularly should your dog be dewormed?",
+		"choices": {
+			"A": "Once a year",
+			"B": "Every 5-8 months",
+			"C": "Every 3-4 months"
+		},
+		"answer": "C",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "Over how many dog breeds are recognized by The Federal Cynologique Federation?",
+		"choices": {
+			"A": "200",
+			"B": "300",
+			"C": "400"
+		},
+		"answer": "C",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "How many dog types are there?",
+		"choices": {
+			"A": "5",
+			"B": "8",
+			"C": "10"
+		},
+		"answer": "B",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "How often should a pet owner walk their dog?",
+		"choices": {
+			"A": "Daily",
+			"B": "Weekly",
+			"C": "Depends"
+		},
+		"answer": "C",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "How many minutes is generally recommended for walking your dog?",
+		"choices": {
+			"A": "5",
+			"B": "15",
+			"C": "25"
+		},
+		"answer": "B",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "Where do dogs get the Ehrlichia Canis disease from?",
+		"choices": {
+			"A": "Food",
+			"B": "Ticks",
+			"C": "Both"
+		},
+		"answer": "B",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "What was the breed of Hachiko?",
+		"choices": {
+			"A": "Shiba Inu",
+			"B": "Akita Inu",
+			"C": "Shikoka Inu"
+		},
+		"answer": "B",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "How do dogs get Heartworms?",
+		"choices": {
+			"A": "Ticks",
+			"B": "Food",
+			"C": "Mosquito"
+		},
+		"answer": "C",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "What do you call a mother of a littler?",
+		"choices": {
+			"A": "Dam",
+			"B": "Bitch",
+			"C": "Mom"
+		},
+		"answer": "A",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "What do you call a member of a genus that forms a part of the wolf-like canids?",
+		"choices": {
+			"A": "K-9",
+			"B": "Kanine",
+			"C": "Canine"
+		},
+		"answer": "C",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "Over how many veterinary clinics/hospitals are there in Cebu?",
+		"choices": {
+			"A": "1-5",
+			"B": "10-20",
+			"C": "50-80"
+		},
+		"answer": "B",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "What is the preferred dog breed of Queen Elizabeth II?",
+		"choices": {
+			"A": "Beagle",
+			"B": "Corgi",
+			"C": "Dachshund"
+		},
+		"answer": "B",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "When was the world's first dog show?",
+		"choices": {
+			"A": "1971",
+			"B": "1859",
+			"C": "1890"
+		},
+		"answer": "B",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "How tall was the tallest dog Zeus, a great dane?",
+		"choices": {
+			"A": "40 inches",
+			"B": "44 inches",
+			"C": "48 inches"
+		},
+		"answer": "B",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "What dog breed was considered as the 'Nanny dogs'?",
+		"choices": {
+			"A": "Pitbulls",
+			"B": "Labrador",
+			"C": "Dalmatian"
+		},
+		"answer": "A",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "What is the fastest breed of dog?",
+		"choices": {
+			"A": "Greyhound",
+			"B": "Rottweiler",
+			"C": "Husky"
+		},
+		"answer": "A",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "When is the National Dog Day annually held?",
+		"choices": {
+			"A": "August 24",
+			"B": "August 25",
+			"C": "August 26"
+		},
+		"answer": "C",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "One dog year is equivalent to how many human years?",
+		"choices": {
+			"A": "1",
+			"B": "7",
+			"C": "15"
+		},
+		"answer": "C",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "Most mature female dogs will go into heat every how many months?",
+		"choices": {
+			"A": "2 months",
+			"B": "6 months",
+			"C": "8 months"
+		},
+		"answer": "B",
+		"caption": ""
+	},
+	{		
+		"type": "mc",
+		"question": "How long does a dog get pregnant?",
+		"choices": {
+			"A": "63 days",
+			"B": "1 month",
+			"C": "3 months"
+		},
+		"answer": "A",
+		"caption": ""
+	},
+
+
+
+	{		
 		"type": "tf",
-		"question": "True?",
+		"question": "Dalmatians are born pure white.",
 		"choices": ["True", "False"],
-		"answer": "True"
+		"answer": "True",
+		"caption": ""
 	},
-	{
-		"completed": false,
+	{		
 		"type": "tf",
-		"question": "False?",
+		"question": "Dogs can only see black and white.",
 		"choices": ["True", "False"],
-		"answer": "False"
+		"answer": "False",
+		"caption": ""
 	},
-	{
-		"completed": false,
+	{		
+		"type": "tf",
+		"question": "A Chow-chow is born with pink tongues.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Chocolates can be fatal to your dogs.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Dogs can eat potato chips or pretzels.",
+		"choices": ["True", "False"],
+		"answer": "False",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Pope Francis said Dogs can go to Heaven.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Dogs can be fed carrots.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Dogs can have yogurt.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Dogs can be fed pumpkin.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Dogs can be fed green beans.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Apple slices help clean the residue off your dog's teeth.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Adult dogs are prone to Parvovirus rather than puppies.",
+		"choices": ["True", "False"],
+		"answer": "False",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "People can get infected with heartworm from their dog.",
+		"choices": ["True", "False"],
+		"answer": "False",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Immiticide is the drug that treats a dog's heartworm in the blood vessel of  the heart.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Litter refers to multiple offspring at one birth of a dog.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "A male canine is referred to as a Dog.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "A wet nose is an indicator that your dog may not be feeling well.",
+		"choices": ["True", "False"],
+		"answer": "False",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "A wagging tail always means that your dog is happy.",
+		"choices": ["True", "False"],
+		"answer": "False",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Dogs sweat on the pad of their paws.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Dogs have their own kind of 'fingerprint'.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Dogs have the same brain wave pattern as humans when they dream.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "A puppy has to be trained at least 6 months old.",
+		"choices": ["True", "False"],
+		"answer": "False",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "An older dog can't learn new tricks.",
+		"choices": ["True", "False"],
+		"answer": "False",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Eye contact is important when training your dog.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Parkmall is the only mall in Cebu where you can bring along your dog.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Dogs are capable of detecting a bad weather that's coming.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Dogs can detect earthquakes.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "A dog can tell if a stranger is a possible threat to you.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Dogs are capable of detecting cancer.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Triqueros del Valle is the first place that gives equal rights to dogs as citizens.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "All dog breeds can bark.",
+		"choices": ["True", "False"],
+		"answer": "False",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Dogs have about 100 facial expressions.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Humans and dogs have the same blood type.",
+		"choices": ["True", "False"],
+		"answer": "False",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Dogs have fewer taste buds than humans.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Dogs can hear from sounds that are too faint for humans.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "A Chihuahua is born with a soft spot on their skull just like human babies.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Dogs can eat shrimps.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Tihar is an annual festival in Nepal that is devoted to the celebration of dogs.",
+		"choices": ["True", "False"],
+		"answer": "True",
+		"caption": ""
+	},
+	{		
+		"type": "tf",
+		"question": "Larger type of dogs tend to live longer that smaller types.",
+		"choices": ["True", "False"],
+		"answer": "False",
+		"caption": ""
+	},
+
+
+
+	{		
 		"type": "yn",
-		"question": "Yes?",
+		"question": "Can you give your dog Candy or Gum?",
 		"choices": ["Yes", "No"],
-		"answer": "Yes"
-	}
+		"answer": "No",
+		"caption": ""
+	},
+	{		
+		"type": "yn",
+		"question": "Is it okay to give your dog Peaches, Plums or Persimmons?",
+		"choices": ["Yes", "No"],
+		"answer": "No",
+		"caption": ""
+	},
+	{		
+		"type": "yn",
+		"question": "Is it important to deworm your dog?",
+		"choices": ["Yes", "No"],
+		"answer": "Yes",
+		"caption": ""
+	},
+	{		
+		"type": "yn",
+		"question": "Is it good to keep recorded dates of when the deworming was carried out?",
+		"choices": ["Yes", "No"],
+		"answer": "Yes",
+		"caption": ""
+	},
+	{		
+		"type": "yn",
+		"question": "Is rabies vaccination important to dogs?",
+		"choices": ["Yes", "No"],
+		"answer": "Yes",
+		"caption": ""
+	},
+	{		
+		"type": "yn",
+		"question": "Is walking your dog important?",
+		"choices": ["Yes", "No"],
+		"answer": "Yes",
+		"caption": ""
+	},
+	{		
+		"type": "yn",
+		"question": "Should you let your dog walk in front of you during a walk?",
+		"choices": ["Yes", "No"],
+		"answer": "No",
+		"caption": ""
+	},
+	{		
+		"type": "yn",
+		"question": "Can dogs get Dementia as they grow older?",
+		"choices": ["Yes", "No"],
+		"answer": "Yes",
+		"caption": ""
+	},
+	{		
+		"type": "yn",
+		"question": "If your dog doesn't get treated for Heartworms, will you dog 'outgrow' the disease?",
+		"choices": ["Yes", "No"],
+		"answer": "No",
+		"caption": ""
+	},
 ]

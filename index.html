@@ -36,18 +36,20 @@
 </head>
 <body>
 
-<div id="input-box">
+<!-- <div id="input-box">
     <input id="username" type="text" placeholder="Name" />
-</div>
+</div> -->
 <script type="text/javascript">
 
 var background;
 var timer;
 
+var menuGroup;
 var playerName;
-var playerScore;
-var playerScoreText;
-var playerLife = 3;
+var playerScore = 0;
+var playerScoreText = null;
+var playerLife = 5;
+var playerLifeSprite = null;
 
 var getHighscores = false;
 
