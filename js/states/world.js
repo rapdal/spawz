@@ -20,20 +20,21 @@ var worldState = {
 		graphics.beginFill(color1, 1);
 		graphics.drawRect(0, 0, game.width, 50);
 
-		menuGroup = game.add.group();
+		menuGroup = game.add.group();		
+		
 		playerLifeSprite = game.add.sprite(game.world.top+10, 10, 'life'+playerLife);
 		playerScoreText = game.add.text(game.world.right - 50, 10, playerScore,
 	    	{ font:'26px Arial', fontWeight:'bolder', fill:'#fff' });
 
 		menuGroup.add(playerLifeSprite);
 		menuGroup.add(playerScoreText);
-				
+						
 		this.generateQA();	
 	},	
 
 	update: function() {	
 		game.world.bringToTop(QAgroup);
-		game.world.bringToTop(menuGroup);
+		game.world.bringToTop(menuGroup);		
 	},	
 
 	restart: function () {		
@@ -78,6 +79,22 @@ var worldState = {
 
 	    QAgroup.add(questionText);
 
+	    var circleDiameter = 40;	
+		var circleRadius = circleDiameter / 2;		
+	    var circleX = questionPanel.x;
+	    var circleY = questionPanel.y+questionPanel.height;
+	    graphics.lineStyle(3, color1);
+	    graphics.beginFill(color2, 1);
+	    graphics.drawCircle(circleX, circleY, circleDiameter);
+	    graphics.endFill();	 
+
+	    questionTime = questionTimeDefault;	
+		questionTimerText = game.add.text(0, 0, questionTime,
+			{ font: '20px Arial', fontWeight: "bolder", fill: '#f53', boundsAlignH:'center', boundsAlignV:'middle', });	
+		questionTimerText.setTextBounds(questionPanel.x-25, questionPanel.y+questionPanel.height-23, 50, 50);	 
+
+		QAgroup.add(questionTimerText);   		
+
 	   if (item.type == 'mc') {	   
 			var num = 0;
 			for (var key in item.choices) {		
@@ -89,7 +106,23 @@ var worldState = {
 			for (var i=0; i<2; i++) {
 				this.addTwoChoices(item.choices[i], i);
 			}
-		}							
+		}	
+
+		this.startTimer();
+	},
+
+	startTimer: function() {
+		var _this = this;
+		questionTime = questionTimeDefault;	
+		questionTimer = game.time.events.repeat(1000, questionTimeDefault, function(){ _this.updateTime() });
+	},
+
+	updateTime: function() {										
+		questionTime--;
+		questionTimerText.setText(questionTime);
+		if (questionTime < 1) {
+			this.checkAnswer('Wrong Answer');		
+		}
 	},
 
 	addMultipleChoice: function(key, choice, num) {		
@@ -180,7 +213,7 @@ var worldState = {
 			}
 			this.updatePlayerLife();
 		}
-
+		
 		this.destroyGraphics(QAgroup);
 
 		questionsJSON.splice(questionIndex, 1);

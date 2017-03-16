@@ -10,13 +10,13 @@ var loadState = {
 
 		game.load.image('startbtn', 'assets/start.png')
 
-		game.load.image('life1', 'assets/life-1.png');
-		game.load.image('life2', 'assets/life-2.png');
-		game.load.image('life3', 'assets/life-3.png');
-		game.load.image('life4', 'assets/life-4.png');
-		game.load.image('life5', 'assets/life-5.png');
+		game.load.image('life1', 'assets/life-1.png?v=1');
+		game.load.image('life2', 'assets/life-2.png?v=1');
+		game.load.image('life3', 'assets/life-3.png?v=1');
+		game.load.image('life4', 'assets/life-4.png?v=1');
+		game.load.image('life5', 'assets/life-5.png?v=1');
 
-		game.load.json('questions', '../../assets/questions.json?v=2');
+		game.load.json('questions', '../../assets/questions.json?v=1');
 	},
 
 	create: function () {		

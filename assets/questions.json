@@ -8,7 +8,7 @@
 			"C": "Parsen"
 		},
 		"answer": "A",
-		"caption": ""
+		"caption": "Avocado contains Persin which can cause diarrhea, vomitting, and heart congestion to your dog."
 	},
 	{		
 		"type": "mc",
@@ -19,7 +19,7 @@
 			"C": "Pomeranian"
 		},
 		"answer": "A",
-		"caption": ""
+		"caption": "Chihuahua - breeds originally from Mexico."
 	},
 	{		
 		"type": "mc",
@@ -30,7 +30,7 @@
 			"C": "Husky"
 		},
 		"answer": "B",
-		"caption": ""
+		"caption": "Great Dane - breeds originally from Germany."
 	},
 	{		
 		"type": "mc",
@@ -41,7 +41,7 @@
 			"C": "60-140"
 		},
 		"answer": "B",
-		"caption": ""
+		"caption": "60-100 times per minute. Comparatively, same as the resting human heart beats."
 	},
 	{		
 		"type": "mc",
@@ -52,7 +52,7 @@
 			"C": "4"
 		},
 		"answer": "B",
-		"caption": ""
+		"caption": "They have 3 eyelids called Nictitating Membrane or 'Haw' which helps their eyes moist and protected."
 	},
 	{		
 		"type": "mc",
@@ -63,7 +63,7 @@
 			"C": "Every 3-4 months"
 		},
 		"answer": "C",
-		"caption": ""
+		"caption": "A puppy is dewormed every 2 weeks. Thereafter, your dog should be dewormed every 3-4 months its entire life."
 	},
 	{		
 		"type": "mc",
@@ -74,7 +74,7 @@
 			"C": "400"
 		},
 		"answer": "C",
-		"caption": ""
+		"caption": "Over 400 breeds are said to be recognized that includes Purebreeds, Cross-breeds, Mixed breeds and Natural Breeds."
 	},
 	{		
 		"type": "mc",
@@ -85,7 +85,7 @@
 			"C": "10"
 		},
 		"answer": "B",
-		"caption": ""
+		"caption": "There are about 8 dog types for all the different kinds of dog breeds."
 	},
 	{		
 		"type": "mc",
@@ -96,7 +96,7 @@
 			"C": "Depends"
 		},
 		"answer": "C",
-		"caption": ""
+		"caption": "It depends on the dog. Once a day could be enough for some older dogs while high-energy dogs requires more walks."
 	},
 	{		
 		"type": "mc",
@@ -107,7 +107,7 @@
 			"C": "25"
 		},
 		"answer": "B",
-		"caption": ""
+		"caption": "As a general rule, it is recommended that your dog should be walked for 15 mins, twice a day."
 	},
 	{		
 		"type": "mc",
@@ -118,7 +118,7 @@
 			"C": "Both"
 		},
 		"answer": "B",
-		"caption": ""
+		"caption": "Dogs get Ehrlichia Canis from Ticks, where it passes the organism in the bloodstrem when the tick bites."
 	},
 	{		
 		"type": "mc",
@@ -129,7 +129,7 @@
 			"C": "Shikoka Inu"
 		},
 		"answer": "B",
-		"caption": ""
+		"caption": "Hachiko the loyal and faithful dog is an Akita Inu."
 	},
 	{		
 		"type": "mc",
@@ -140,7 +140,7 @@
 			"C": "Mosquito"
 		},
 		"answer": "C",
-		"caption": ""
+		"caption": "Mosquits. Just one bite of a mosquito infested with heartworm larvae will give you dog heartworm disease."
 	},
 	{		
 		"type": "mc",
@@ -151,7 +151,7 @@
 			"C": "Mom"
 		},
 		"answer": "A",
-		"caption": ""
+		"caption": "Dam. While a father of litter is called a Sire."
 	},
 	{		
 		"type": "mc",
@@ -162,7 +162,7 @@
 			"C": "Canine"
 		},
 		"answer": "C",
-		"caption": ""
+		"caption": "Canine or Canis Lupus Familiaris is also known as Domestic Dogs."
 	},
 	{		
 		"type": "mc",
@@ -173,7 +173,7 @@
 			"C": "50-80"
 		},
 		"answer": "B",
-		"caption": ""
+		"caption": "There are over 10-20 veterinary hospitals and clinics all over Cebu."
 	},
 	{		
 		"type": "mc",
@@ -184,7 +184,7 @@
 			"C": "Dachshund"
 		},
 		"answer": "B",
-		"caption": ""
+		"caption": "Pembroke Welsh Corgis or simply Corgis. Queen Elizabeth II has owned more than 30 during her reign."
 	},
 	{		
 		"type": "mc",
@@ -195,18 +195,18 @@
 			"C": "1890"
 		},
 		"answer": "B",
-		"caption": ""
+		"caption": "The wrold's first dog show was held in Newcastle upon Tyne, UK."
 	},
 	{		
 		"type": "mc",
-		"question": "How tall was the tallest dog Zeus, a great dane?",
+		"question": "How tall was the tallest dog Zues, a great dane?",
 		"choices": {
 			"A": "40 inches",
 			"B": "44 inches",
 			"C": "48 inches"
 		},
 		"answer": "B",
-		"caption": ""
+		"caption": "Zues was 44 inches tall and was given the Guiness World Record for tallest dog on October 4, 2011."
 	},
 	{		
 		"type": "mc",
@@ -217,7 +217,7 @@
 			"C": "Dalmatian"
 		},
 		"answer": "A",
-		"caption": ""
+		"caption": "Pitbulls were called 'Nanny dogs' on the 19th and 20th century."
 	},
 	{		
 		"type": "mc",
@@ -228,7 +228,7 @@
 			"C": "Husky"
 		},
 		"answer": "A",
-		"caption": ""
+		"caption": "The Greyhound can run at up to 45mph while the normal speed for dogs is around 20mph."
 	},
 	{		
 		"type": "mc",
@@ -239,7 +239,7 @@
 			"C": "August 26"
 		},
 		"answer": "C",
-		"caption": ""
+		"caption": "National Dog Day is founded by Colleen Paige, August 26 is the day she adopted her first dog 'Sheltie'."
 	},
 	{		
 		"type": "mc",
@@ -250,7 +250,7 @@
 			"C": "15"
 		},
 		"answer": "C",
-		"caption": ""
+		"caption": "Dogs mature more quickly than we do; 1 dog year is equivalent to 15 in human years."
 	},
 	{		
 		"type": "mc",
@@ -261,7 +261,7 @@
 			"C": "8 months"
 		},
 		"answer": "B",
-		"caption": ""
+		"caption": "Dogs go into heat every 6 months and the heat cycle is approximately 3 weeks."
 	},
 	{		
 		"type": "mc",
@@ -272,7 +272,7 @@
 			"C": "3 months"
 		},
 		"answer": "A",
-		"caption": ""
+		"caption": "Dogs are pregnant for about 58-63 days; it is measured from the day they ovulate till their litters are born."
 	},
 
 
@@ -282,273 +282,273 @@
 		"question": "Dalmatians are born pure white.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Dalmatians are born pure white and they develop their spots as they grow older."
 	},
 	{		
 		"type": "tf",
 		"question": "Dogs can only see black and white.",
 		"choices": ["True", "False"],
 		"answer": "False",
-		"caption": ""
+		"caption": "Dogs are believed to be able to see primarily blue, greenish-yellow, yellow and various shades of grey."
 	},
 	{		
 		"type": "tf",
 		"question": "A Chow-chow is born with pink tongues.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Chow-chow are born with pink tongues, their tongues turn blue-black when Chow-chows are 8-10 weeks old."
 	},
 	{		
 		"type": "tf",
 		"question": "Chocolates can be fatal to your dogs.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Chocolates contain Methylxanthines that could lead to their deaths."
 	},
 	{		
 		"type": "tf",
 		"question": "Dogs can eat potato chips or pretzels.",
 		"choices": ["True", "False"],
 		"answer": "False",
-		"caption": ""
+		"caption": "Potato chips and pretzels usually contain a lot of salt that could cause Sodium Ion Poisoning to dogs."
 	},
 	{		
 		"type": "tf",
 		"question": "Pope Francis said Dogs can go to Heaven.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Pope Francis said it while giving comfort to a boy grieving the loss of his dog."
 	},
 	{		
 		"type": "tf",
 		"question": "Dogs can be fed carrots.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Carrots are high in Fiber and Vitamin A. Carrots are also good for their teeth."
 	},
 	{		
 		"type": "tf",
 		"question": "Dogs can have yogurt.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Yogurts are high in calcium and protein but be careful of artifical sweeteners or added sugars."
 	},
 	{		
 		"type": "tf",
 		"question": "Dogs can be fed pumpkin.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Pumpkins contain Vitamin A and can aid with your dog's digestive tissues."
 	},
 	{		
 		"type": "tf",
 		"question": "Dogs can be fed green beans.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Green beans are low in calories and have no added salt."
 	},
 	{		
 		"type": "tf",
 		"question": "Apple slices help clean the residue off your dog's teeth.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Apples are good sources of Vitamin A and C. It also freshen your dog's breath."
 	},
 	{		
 		"type": "tf",
 		"question": "Adult dogs are prone to Parvovirus rather than puppies.",
 		"choices": ["True", "False"],
 		"answer": "False",
-		"caption": ""
+		"caption": "Majority cases of Parvovirus are seen in puppies that are between 6 weeks or 6 months old."
 	},
 	{		
 		"type": "tf",
 		"question": "People can get infected with heartworm from their dog.",
 		"choices": ["True", "False"],
 		"answer": "False",
-		"caption": ""
+		"caption": "It's a specific parasite that only affects dogs, cats, and other animals."
 	},
 	{		
 		"type": "tf",
 		"question": "Immiticide is the drug that treats a dog's heartworm in the blood vessel of  the heart.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Immiticide is an injectable, arsenic-based product given to your dog for 2 or 3 shots."
 	},
 	{		
 		"type": "tf",
 		"question": "Litter refers to multiple offspring at one birth of a dog.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Litter is more known to us as Puppies."
 	},
 	{		
 		"type": "tf",
 		"question": "A male canine is referred to as a Dog.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "While a female canine is referred to as Bitch."
 	},
 	{		
 		"type": "tf",
 		"question": "A wet nose is an indicator that your dog may not be feeling well.",
 		"choices": ["True", "False"],
 		"answer": "False",
-		"caption": ""
+		"caption": "It's in your dog's gums. The color will change if your dog may have been sick."
 	},
 	{		
 		"type": "tf",
 		"question": "A wagging tail always means that your dog is happy.",
 		"choices": ["True", "False"],
 		"answer": "False",
-		"caption": ""
+		"caption": "Tail wagging has it's own language, it could mean happy, frightened, or aggression."
 	},
 	{		
 		"type": "tf",
 		"question": "Dogs sweat on the pad of their paws.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Dogs don't have as much as sweat glands as humans to sweat all over their body."
 	},
 	{		
 		"type": "tf",
 		"question": "Dogs have their own kind of 'fingerprint'.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "A dog's 'fingerprint' is found in ther noses rather than their paws."
 	},
 	{		
 		"type": "tf",
 		"question": "Dogs have the same brain wave pattern as humans when they dream.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Dogs can have dreams in their sleeps just like we do."
 	},
 	{		
 		"type": "tf",
 		"question": "A puppy has to be trained at least 6 months old.",
 		"choices": ["True", "False"],
 		"answer": "False",
-		"caption": ""
+		"caption": "You can actually start training a puppy as early as 2-3 months old."
 	},
 	{		
 		"type": "tf",
 		"question": "An older dog can't learn new tricks.",
 		"choices": ["True", "False"],
 		"answer": "False",
-		"caption": ""
+		"caption": "You can train a dog at any age, it just needs patience."
 	},
 	{		
 		"type": "tf",
 		"question": "Eye contact is important when training your dog.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Eye contact will also help you establish your role as a pack leader."
 	},
 	{		
 		"type": "tf",
 		"question": "Parkmall is the only mall in Cebu where you can bring along your dog.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Parkmall is located in Mandaue, Cebu City."
 	},
 	{		
 		"type": "tf",
 		"question": "Dogs are capable of detecting a bad weather that's coming.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Studies show that dogs are capable of sensing the barometric pressure drog and shift in static electric field."
 	},
 	{		
 		"type": "tf",
 		"question": "Dogs can detect earthquakes.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Like some animals, dogs can sense the electric signals produced by the movement of rocks beneath the earth."
 	},
 	{		
 		"type": "tf",
 		"question": "A dog can tell if a stranger is a possible threat to you.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Dogs are highly sensitive of pheromones which we are not aware of."
 	},
 	{		
 		"type": "tf",
 		"question": "Dogs are capable of detecting cancer.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Studies show that dogs are good at recognizing the difference between malignant tissues to a normal tissue."
 	},
 	{		
 		"type": "tf",
 		"question": "Triqueros del Valle is the first place that gives equal rights to dogs as citizens.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Trigueros del Villa is a town located in Spain."
 	},
 	{		
 		"type": "tf",
 		"question": "All dog breeds can bark.",
 		"choices": ["True", "False"],
 		"answer": "False",
-		"caption": ""
+		"caption": "The Basenji dog is a breed that is also known as the Barkless dog but they can yodel."
 	},
 	{		
 		"type": "tf",
 		"question": "Dogs have about 100 facial expressions.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Most of the dog's facial expressions are shown in their eyes and ears."
 	},
 	{		
 		"type": "tf",
 		"question": "Humans and dogs have the same blood type.",
 		"choices": ["True", "False"],
 		"answer": "False",
-		"caption": ""
+		"caption": "Canine blood types are denoted by 'DEA' or Dog Erythrocyte Antigen."
 	},
 	{		
 		"type": "tf",
 		"question": "Dogs have fewer taste buds than humans.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Dogs have fewer than 2,000 taste buds, it is the smell that initially attracts them to food."
 	},
 	{		
 		"type": "tf",
 		"question": "Dogs can hear from sounds that are too faint for humans.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "A dog's hearing is so good that they rely more on sounds than on sight to navigate the world."
 	},
 	{		
 		"type": "tf",
 		"question": "A Chihuahua is born with a soft spot on their skull just like human babies.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "The soft part of a Chihuahua pup's head is called a 'Molera'. It hardens up as they age."
 	},
 	{		
 		"type": "tf",
 		"question": "Dogs can eat shrimps.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Dogs can eat shrimps as longs as it's properly cooked and peeled."
 	},
 	{		
 		"type": "tf",
 		"question": "Tihar is an annual festival in Nepal that is devoted to the celebration of dogs.",
 		"choices": ["True", "False"],
 		"answer": "True",
-		"caption": ""
+		"caption": "Kukur Tihar is the 2nd day celebration for dogs in the 5 day Tihar Festival in Nepal."
 	},
 	{		
 		"type": "tf",
 		"question": "Larger type of dogs tend to live longer that smaller types.",
 		"choices": ["True", "False"],
 		"answer": "False",
-		"caption": ""
+		"caption": "Smaller type dogs tend to live longer while larger type dogs tend to mature more quickly."
 	},
 
 
@@ -558,62 +558,62 @@
 		"question": "Can you give your dog Candy or Gum?",
 		"choices": ["Yes", "No"],
 		"answer": "No",
-		"caption": ""
+		"caption": "Candy and Gum contains Xylitol which could lead to your dog's kidney failure."
 	},
 	{		
 		"type": "yn",
 		"question": "Is it okay to give your dog Peaches, Plums or Persimmons?",
 		"choices": ["Yes", "No"],
 		"answer": "No",
-		"caption": ""
+		"caption": "Peaches, Plums, and Persimmons contain Cyanide that could cause inflammation in your dog's intestines."
 	},
 	{		
 		"type": "yn",
 		"question": "Is it important to deworm your dog?",
 		"choices": ["Yes", "No"],
 		"answer": "Yes",
-		"caption": ""
+		"caption": "Dogs have a large variety of Endoparasites that could cause serious illness and Deworming helps prevent them."
 	},
 	{		
 		"type": "yn",
 		"question": "Is it good to keep recorded dates of when the deworming was carried out?",
 		"choices": ["Yes", "No"],
 		"answer": "Yes",
-		"caption": ""
+		"caption": "Keeping deworming records will assist your vet in choosing the right medicine should your dog become ill."
 	},
 	{		
 		"type": "yn",
 		"question": "Is rabies vaccination important to dogs?",
 		"choices": ["Yes", "No"],
 		"answer": "Yes",
-		"caption": ""
+		"caption": "Rabies is a fatal disease that is easily prevented with vaccination."
 	},
 	{		
 		"type": "yn",
 		"question": "Is walking your dog important?",
 		"choices": ["Yes", "No"],
 		"answer": "Yes",
-		"caption": ""
+		"caption": "Walking is a type of exercise for dogs and to have your dog socialize with other dogs."
 	},
 	{		
 		"type": "yn",
 		"question": "Should you let your dog walk in front of you during a walk?",
 		"choices": ["Yes", "No"],
 		"answer": "No",
-		"caption": ""
+		"caption": "Your dog should either be beside or behind you during a walk to allow you to be seen as a pack leader."
 	},
 	{		
 		"type": "yn",
 		"question": "Can dogs get Dementia as they grow older?",
 		"choices": ["Yes", "No"],
 		"answer": "Yes",
-		"caption": ""
+		"caption": "Senior dogs can have Dementia that occur because of the abnormal or lack of proteins in the brain."
 	},
 	{		
 		"type": "yn",
 		"question": "If your dog doesn't get treated for Heartworms, will you dog 'outgrow' the disease?",
 		"choices": ["Yes", "No"],
 		"answer": "No",
-		"caption": ""
-	},
+		"caption": "Your dog would stand a high chance of dying from heartworm disease."
+	}
 ]
