@@ -1,6 +1,10 @@
 				
 var worldState = {
-	create: function() {			
+	create: function() {	
+		this.drawMenu();
+
+		questionTimer = game.time.events;
+
 		questionPanel = {       
 		    x: (game.world.width * 0.15),
 		    y: (game.world.height * 0.25),
@@ -12,34 +16,39 @@ var worldState = {
 
 		questionsJSON = game.cache.getJSON('questions');				
 		
-		background = game.add.sprite(0, 0, "bgmc1");
+		background = game.add.sprite(0, 50, "bgmc1");
 		background.width = 	game.width;
-		background.height = game.height;
-
-		var graphics = game.add.graphics(0, 0);	
-		graphics.beginFill(color1, 1);
-		graphics.drawRect(0, 0, game.width, 50);
-
-		menuGroup = game.add.group();		
-		
-		playerLifeSprite = game.add.sprite(game.world.top+10, 10, 'life'+playerLife);
-		playerScoreText = game.add.text(game.world.right - 50, 10, playerScore,
-	    	{ font:'26px Arial', fontWeight:'bolder', fill:'#fff' });
-
-		menuGroup.add(playerLifeSprite);
-		menuGroup.add(playerScoreText);
+		background.height = game.height-50;		
 						
 		this.generateQA();	
 	},	
 
 	update: function() {	
-		game.world.bringToTop(QAgroup);
+		game.world.bringToTop(qaGroup);
+		game.world.bringToTop(answerGroup);
 		game.world.bringToTop(menuGroup);		
 	},	
 
 	restart: function () {		
 		getHighscores = false;
 		game.state.start('gameover');
+	},
+
+	drawMenu: function() {
+		menuGroup = game.add.group();	
+
+		var graphics = game.add.graphics(0, 0);	
+		graphics.beginFill(color1, 1);
+		graphics.drawRect(0, 0, game.width, 50);
+		menuGroup.add(graphics);
+		
+		playerLifeSprite = game.add.sprite(game.world.top+10, 10, 'life'+playerLife);
+
+		gameLevelText = game.add.text(game.world.right - 40, 10, gameLevel,
+	    	{ font: fontFamily1, fontSize:'26px', fontWeight:'bolder', fill:'#fff' });
+
+		menuGroup.add(playerLifeSprite);
+		menuGroup.add(gameLevelText);	
 	},
 
 	getRandomInt: function(min, max) {
@@ -49,51 +58,59 @@ var worldState = {
 	},
 
 	generateQA: function() {		
-		QAgroup = game.add.group();	
+		qaGroup = game.add.group();	
+		answerGroup = game.add.group();
 		questionIndex = this.getRandomInt(0, questionsJSON.length);		
 		this.addQuestion(questionsJSON[questionIndex]);	
 	},
 
-	addQuestion: function(item) {			
-		var graphics = game.add.graphics(0, 0);			
+	addQuestion: function(item) {	
+		var levelSprite = game.add.sprite(questionPanel.x+10, questionPanel.y-50, 'level');
+		levelSprite.width = 58; levelSprite.height = 50;
+		qaGroup.add(levelSprite);
 
-		graphics.lineStyle(5, color1);
-		graphics.beginFill(color2, 5);
-	    graphics.drawRoundedRect(
+		var levelText = game.add.text(0, 0, gameLevel,
+			{ font:fontFamily2, fontSize:'24px', fill:'#fff', boundsAlignH:'center', boundsAlignV:'middle',
+	    	align:'center', wordWrap:true, wordWrapWidth: questionPanel.width-40 });
+	    levelText.setTextBounds(questionPanel.x+25, questionPanel.y-23, 25, 20);	    
+	    qaGroup.add(levelText);
+
+		var questionGraphics = game.add.graphics(0, 0);			
+		questionGraphics.lineStyle(5, color1);
+		questionGraphics.beginFill(color2, 5);
+	    questionGraphics.drawRoundedRect(
 	    	questionPanel.x, 
 	    	questionPanel.y, 
 	    	questionPanel.width, 
 	    	questionPanel.height,	    	
 	    	questionPanel.radius
 	    );
-	    graphics.endFill();	
-
-	    QAgroup.add(graphics);
+	    questionGraphics.endFill();	
+	    qaGroup.add(questionGraphics);
 
 	    var question = item.question;	
-
 	    var questionText = game.add.text(0, 0, question,
-	    	{ font:'20px Arial', fill:'#fff', boundsAlignH:'center', boundsAlignV:'middle',
+	    	{ font: fontFamily1, fontSize:'20px', fill:'#fff', boundsAlignH:'center', boundsAlignV:'middle',
 	    	align:'center', wordWrap:true, wordWrapWidth: questionPanel.width-40 });
 	    questionText.setTextBounds(questionPanel.x+10, questionPanel.y, questionPanel.width-10, questionPanel.height-10);	    
+	    qaGroup.add(questionText);
 
-	    QAgroup.add(questionText);
-
+	    var timerGraphics = game.add.graphics(0, 0);	
 	    var circleDiameter = 40;	
 		var circleRadius = circleDiameter / 2;		
 	    var circleX = questionPanel.x;
 	    var circleY = questionPanel.y+questionPanel.height;
-	    graphics.lineStyle(3, color1);
-	    graphics.beginFill(color2, 1);
-	    graphics.drawCircle(circleX, circleY, circleDiameter);
-	    graphics.endFill();	 
+	    timerGraphics.lineStyle(3, color1);
+	    timerGraphics.beginFill(color2, 1);
+	    timerGraphics.drawCircle(circleX, circleY, circleDiameter);
+	    timerGraphics.endFill();	 
+	    answerGroup.add(timerGraphics);
 
 	    questionTime = questionTimeDefault;	
 		questionTimerText = game.add.text(0, 0, questionTime,
-			{ font: '20px Arial', fontWeight: "bolder", fill: '#f53', boundsAlignH:'center', boundsAlignV:'middle', });	
+			{ font: fontFamily1, fontSize:'20px', fontWeight: "bolder", fill: '#f53', boundsAlignH:'center', boundsAlignV:'middle', });	
 		questionTimerText.setTextBounds(questionPanel.x-25, questionPanel.y+questionPanel.height-23, 50, 50);	 
-
-		QAgroup.add(questionTimerText);   		
+		answerGroup.add(questionTimerText);   		
 
 	   if (item.type == 'mc') {	   
 			var num = 0;
@@ -113,8 +130,9 @@ var worldState = {
 
 	startTimer: function() {
 		var _this = this;
-		questionTime = questionTimeDefault;	
-		questionTimer = game.time.events.repeat(1000, questionTimeDefault, function(){ _this.updateTime() });
+		questionTime = questionTimeDefault;			
+		questionTimer.repeat(1000, questionTimeDefault, function(){ _this.updateTime() });
+		questionTimer.start();
 	},
 
 	updateTime: function() {										
@@ -126,7 +144,7 @@ var worldState = {
 	},
 
 	addMultipleChoice: function(key, choice, num) {		
-		var graphics = game.add.graphics(0, 0);		
+		var choiceGraphics = game.add.graphics(0, 0);		
 
 		var circleDiameter = 50;	
 		var circleRadius = circleDiameter / 2;
@@ -139,38 +157,36 @@ var worldState = {
 	    var rectWidth = questionPanel.width - 60;
 	    var rectHeight = circleDiameter - 10;
 	    
-	    graphics.lineStyle(0);
-	    graphics.beginFill(color1, 1);
-	    graphics.drawRoundedRect(rectX, rectY, rectWidth, rectHeight, 7);
+	    choiceGraphics.lineStyle(0);
+	    choiceGraphics.beginFill(color1, 1);
+	    choiceGraphics.drawRoundedRect(rectX, rectY, rectWidth, rectHeight, 7);
 	    
-	    graphics.lineStyle(3, color1);
-	    graphics.beginFill(color2, 1);
-	    graphics.drawCircle(circleX, circleY, circleDiameter);
-	    graphics.endFill();	 
+	    choiceGraphics.lineStyle(3, color1);
+	    choiceGraphics.beginFill(color2, 1);
+	    choiceGraphics.drawCircle(circleX, circleY, circleDiameter);
+	    choiceGraphics.endFill();	 
 
-	    graphics.inputEnabled = true; 
+	    choiceGraphics.inputEnabled = true; 
 	    var _this = this;
-        graphics.events.onInputDown.add(function () {         	
+        choiceGraphics.events.onInputDown.add(function () {         	
         	_this.checkAnswer(key);        	
         });  
 
-	    QAgroup.add(graphics);
+	   	answerGroup.add(choiceGraphics);
 
 	    var choiceText = game.add.text(0, 0, choice,
-	    	{ font:'21px Arial', fill:'#fff', boundsAlignV:'middle' });
+	    	{ font: fontFamily1, fontSize:'21px', fill:'#fff', boundsAlignV:'middle' });
 	    choiceText.setTextBounds(rectX+circleDiameter+5, rectY+2, rectWidth, rectHeight);
-
-	    QAgroup.add(choiceText);
+	    answerGroup.add(choiceText);
 	    
 	    var keyText = game.add.text(0, 0, key,
-	    	{ font:'26px Arial', fontWeight:'bolder', fill:"#fff", boundsAlignH:'center', boundsAlignV:'middle', align:'center' });
+	    	{ font: fontFamily1, fontSize:'26px', fontWeight:'bolder', fill:"#fff", boundsAlignH:'center', boundsAlignV:'middle', align:'center' });
 	    keyText.setTextBounds(circleX-circleRadius, circleY-circleRadius+2, circleDiameter, circleDiameter);	
-	   
-	    QAgroup.add(keyText);       	    
+	    answerGroup.add(keyText);       	    
 	},
 
 	addTwoChoices: function(choice, num) {			
-		var graphics = game.add.graphics(0, 0);		
+		var choiceGraphics = game.add.graphics(0, 0);		
 
 		var circleDiameter = 125;	
 		var circleRadius = circleDiameter / 2;
@@ -179,50 +195,123 @@ var worldState = {
 	    var circleX = questionPanel.x + 70 + (answerDistance * num);
 	    var circleY = (questionPanel.y + questionPanel.height + 110);		    
    		    
-	    graphics.lineStyle(10, color1);
-	    graphics.beginFill(color2, 1);
-	    graphics.drawCircle(circleX, circleY, circleDiameter);
-	    graphics.endFill();	 
+	    choiceGraphics.lineStyle(10, color1);
+	    choiceGraphics.beginFill(color2, 1);
+	    choiceGraphics.drawCircle(circleX, circleY, circleDiameter);
+	    choiceGraphics.endFill();	 
 
-	    graphics.inputEnabled = true; 
+	    choiceGraphics.inputEnabled = true; 
 	    var _this = this;
-        graphics.events.onInputDown.add(function () {          	
+        choiceGraphics.events.onInputDown.add(function () {          	
         	_this.checkAnswer(choice);        	
         });  
 
-	    QAgroup.add(graphics);
+	    answerGroup.add(choiceGraphics);
 
 	    var keyText = game.add.text(0, 0, choice,
 	    	{ font:'26px Arial', fontWeight:'bolder', fill:"#fff", boundsAlignH:'center', boundsAlignV:'middle', align:'center' });
 	    keyText.setTextBounds(circleX-circleRadius, circleY-circleRadius+2, circleDiameter, circleDiameter);	
 	   
-	    QAgroup.add(keyText);    		   	  
+	    answerGroup.add(keyText);    		   	  
 	},
 
-	checkAnswer: function(answer) {		
+	checkAnswer: function(answer) {	
+		questionTimer.stop();
+
+		var isCorrect = 'Incorrect';	
+		// Correct
 		if (questionsJSON[questionIndex].answer == answer) {
-			this.updatePlayerScore();
+			isCorrect = 'Correct';
+			playerScore += 10;			
+			// Last question available
 			if (questionsJSON.length == 1) {
 				game.state.start('gameover');
 			}
 		}
+		// Incorrect
 		else {			
 			playerLife--;
+			// Gameover
 			if (playerLife < 1) {
 				game.state.start('gameover');
 			}
 			this.updatePlayerLife();
-		}
-		
-		this.destroyGraphics(QAgroup);
-
-		questionsJSON.splice(questionIndex, 1);
-
-		this.generateQA();	
+		}				
+	
+		this.displayCaption(isCorrect);		
 	},
 
-	updatePlayerScore: function () {
-		playerScore += 10;
+	displayCaption: function(isCorrect) {		
+		this.destroyGraphics(answerGroup);
+
+		var overlayGraphics = game.add.graphics(0, 0);			
+		overlayGraphics.beginFill('0xEFE4AC', 1);
+		overlayGraphics.drawRect(0, 50, game.world.width, game.world.height);
+		overlayGraphics.endFill();	
+		overlayGraphics.alpha = 0.5;	
+		qaGroup.add(overlayGraphics);				
+
+		var captionPanel = {
+			x: questionPanel.x - 10,
+			y: questionPanel.y + questionPanel.height + 50 ,
+			width: questionPanel.width + 20, 
+			height: questionPanel.height / 2,	    				
+		}
+
+		var correctText = game.add.text(0, 0, isCorrect,
+			{ font: fontFamily1, fontSize:'32px', fontWeight:'bolder', fill:color1, boundsAlignH:'center', boundsAlignV:'middle',
+			align:'center', wordWrap:true, wordWrapWidth:questionPanel.width-40 });		
+		correctText.setTextBounds(questionPanel.x, questionPanel.y+questionPanel.height-60, questionPanel.width, questionPanel.height/3);		
+		qaGroup.add(correctText);
+				
+		correctText.pivot.x -= 17.5;
+		var correctSprite = game.add.sprite(Math.abs(correctText.pivot.x)-35, Math.abs(correctText.pivot.y), 'icon'+isCorrect);
+		correctSprite.width = 30; correctSprite.height = 40;
+		qaGroup.add(correctSprite);
+
+		var captionGraphics = game.add.graphics(0,0);
+		captionGraphics.lineStyle(3, color2);		
+	    captionGraphics.drawRoundedRect(
+	    	captionPanel.x, 
+	    	captionPanel.y, 
+	    	captionPanel.width,
+	    	captionPanel.height,	    	
+	    	questionPanel.radius
+	    );	    
+	    qaGroup.add(captionGraphics);
+
+	    var captionText = game.add.text(0, 0, questionsJSON[questionIndex].caption,
+	    	{ font: fontFamily1, fontSize:'17px', fill:color1, boundsAlignH:'center', boundsAlignV:'middle',
+			align:'center', wordWrap:true, wordWrapWidth:questionPanel.width-40 });
+		captionText.setTextBounds(captionPanel.x, captionPanel.y+5, captionPanel.width, captionPanel.height);
+		qaGroup.add(captionText);	
+
+		var continueText = game.add.text(0, 0, 'Tap to continue...',
+			{ font: fontFamily2, fontSize:'17px', fill:color1, boundsAlignH:'center', boundsAlignV:'middle' });
+		continueText.setTextBounds(captionPanel.x, captionPanel.y+captionPanel.height+30, captionPanel.width, 20);
+		qaGroup.add(continueText);	
+
+		var tapGraphics = game.add.graphics(0, 0);
+		tapGraphics.beginFill(color1, 1);		
+		tapGraphics.drawRect(0, 50, game.world.width, game.world.height);		
+		tapGraphics.alpha = 0;
+		qaGroup.add(tapGraphics);
+		tapGraphics.inputEnabled = true; 
+	    var _this = this;
+        tapGraphics.events.onInputDown.add(function () {           	
+        	_this.destroyGraphics(qaGroup);
+
+        	if (isCorrect == "Correct") {
+	        	gameLevel++;  
+	        }    		
+
+	        game.state.start('map'); 
+        });  
+
+		questionsJSON.splice(questionIndex, 1);		
+	},
+
+	updatePlayerScore: function () {		
 		playerScoreText.setText(playerScore);
 	},
 

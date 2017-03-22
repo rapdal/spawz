@@ -10,6 +10,7 @@
     <script type="text/javascript" src="js/states/boot.js"></script>
     <script type="text/javascript" src="js/states/load.js"></script>
     <script type="text/javascript" src="js/states/menu.js"></script>
+    <script type="text/javascript" src="js/states/map.js"></script>
     <script type="text/javascript" src="js/states/world.js"></script>
     <script type="text/javascript" src="js/states/gameover.js"></script>
     <style type="text/css">
@@ -41,6 +42,8 @@
 <script type="text/javascript">
 
 var background;
+var mapSprite;
+var mapJSON;
 
 var questionTimeDefault = 10;
 var questionTime = 0;
@@ -54,7 +57,8 @@ var playerScoreText = null;
 var playerLife = 5;
 var playerLifeSprite = null;
 
-var getHighscores = false;
+var gameLevel = 1;
+var gameLevelText = null;
 
 var gameWidth = 414;
 var gameHeight = 736;
@@ -62,9 +66,14 @@ var gameHeight = 736;
 var color1 = "0x3c2415";
 var color2 = "0xc49a6c";
 
+var fontFamily1 = "Arial";
+var fontFamily2 = "Arial";
+
 var questionsJSON;
 var questionIndex;
-var QAgroup;
+
+var qaGroup;
+var answerGroup;
 
 var questionPanel = {       
     x: 0,
@@ -80,6 +89,7 @@ var game = new Phaser.Game(gameWidth, gameHeight, Phaser.CANVAS, 'gameArea');
 game.state.add('boot', bootState);
 game.state.add('load', loadState);
 game.state.add('menu', menuState);
+game.state.add('map', mapState);
 game.state.add('world', worldState);
 game.state.add('gameover', gameoverState);
 
