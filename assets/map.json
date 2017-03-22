@@ -1,26 +1,26 @@
 [
 	{
 		"x": 40,
-		"y": 686,
+		"y": 4316,
 		"diameter": 52,
-		"end": false
+		"up": false
 	},
 	{
-		"x": 147,
-		"y": 635,
+		"x": 147.5,
+		"y": 4265,
 		"diameter": 52,
-		"end": false
+		"up": false
 	},
 	{
-		"x": 302,
-		"y": 664,
+		"x": 302.5,
+		"y": 4295,
 		"diameter": 52,
-		"end": false
+		"up": false
 	},
 	{
 		"x": 352,
-		"y": 597,
+		"y": 4227,
 		"diameter": 52,
-		"end": false
+		"up": false
 	}
 ]

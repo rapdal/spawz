@@ -1,13 +1,19 @@
 
 var mapState = {
 	create: function () {	
-		this.drawMenu();	
+		var bgHeight = (7350*game.world.width)/705;
+		console.log(bgHeight);
+
+		game.world.setBounds(0, 0, game.world.width, 50 + bgHeight);			
+		game.camera.y = bgHeight;
+
+		this.drawMenu();		
 
 		var scale = game.world.width/705;
-		mapSprite = game.add.tileSprite(0, 0, game.world.width, (7350*game.world.width)/705, 'map');	
+		mapSprite = game.add.tileSprite(0, 50, game.world.width, (7350*game.world.width)/705, 'map');	
 		mapSprite.tileScale.x = scale;
 		mapSprite.tileScale.y = scale;
-		mapSprite.tilePosition.y = game.world.height/scale;	
+		// mapSprite.tilePosition.y = game.world.height/scale;	
 		
 		mapJSON = game.cache.getJSON('mapCoords');			
 		this.addLevels();
@@ -36,13 +42,15 @@ var mapState = {
 
 	addLevels: function () {		
 		for (let x=0; x<gameLevel-1; x++) {
-			this.addCompeleLevel(x);
+			this.addCompeletedLevel(x);
 		}
 		this.addCurrentLevel();
 	},
 
-	addCompeleLevel: function (level) {
-		var coords = mapJSON[level];					        
+	addCompeletedLevel: function (level) {
+		var coords = mapJSON[level];			
+		distFromBottom = (game.world.bottom - mapSprite.tilePosition.y);
+		console.log(distFromBottom);		        
 
 	   	var levelMask = game.add.graphics(0,0);	   	   
 		levelMask.beginFill("black", 5);
@@ -60,9 +68,13 @@ var mapState = {
 	addCurrentLevel: function () {
 		var coords = mapJSON[gameLevel-1];
 
+		if (coords.up) {
+			game.camera.y -= 100;
+        }
+
 		var levelBorder = game.add.graphics(0,0);
-		levelBorder.lineStyle(3, color1);	    		
-	    levelBorder.drawCircle(coords.x, coords.y, coords.diameter);		        
+		levelBorder.lineStyle(4, color1);	    		
+	    levelBorder.drawCircle(coords.x, coords.y, coords.diameter-4);		        
 
 	   	var levelMask = game.add.graphics(0,0);	   	   
 		levelMask.beginFill(color2, 5);
@@ -74,7 +86,7 @@ var mapState = {
 	    var _this = this;
         levelMask.events.onInputDown.add(function () {         	
         	_this.start();        	
-        });  
+        });          
 	},
 
 	start: function () {	
