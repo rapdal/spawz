@@ -32,21 +32,53 @@ var worldState = {
 		game.world.bringToTop(menuGroup);		
 	},		
 
-	drawMenu: function() {
-		menuGroup = game.add.group();	
+	drawMenu: function () {				
+		menuGroup = game.add.group();			
 
 		var graphics = game.add.graphics(0, 0);	
 		graphics.beginFill(color1, 1);
-		graphics.drawRect(0, 0, game.width, 50);
-		menuGroup.add(graphics);
+		graphics.drawRect(0, 0, game.width, 50);		
 		
-		playerLifeSprite = game.add.sprite(game.world.top+10, 10, 'life'+playerLife);
+		playerLifeSprite = game.add.sprite(game.world.top+10, 5, 'life'+playerLife);
+
+		var time = new Date(rechargeTime * 1000).toISOString().substr(14, 5);				
+		rechargeTimeText = game.add.text(0,0, time,
+			{ font: fontFamily1, fontSize:'13px', fill:'#fff', boundsAlignH:'center', boundsAlignV:'middle',
+	    	align:'center', wordWrap:true, wordWrapWidth: questionPanel.width-40 });
+	    rechargeTimeText.setTextBounds(game.world.top+18, game.world.top+37, 83, 16);	    
 
 		gameLevelText = game.add.text(game.world.right - 40, 10, gameLevel,
 	    	{ font: fontFamily1, fontSize:'26px', fontWeight:'bolder', fill:'#fff' });
 
+		menuGroup.add(graphics);
+		menuGroup.add(gameLevelText);
 		menuGroup.add(playerLifeSprite);
-		menuGroup.add(gameLevelText);	
+		menuGroup.add(rechargeTimeText);					
+		
+		this.startRechargeTime();		
+	},
+
+	startRechargeTime: function () {	
+		console.log('recharge started');
+		var _this = this;
+		rechargeTimer.repeat(1000, rechargeTime, function(){ _this.updateRechargeTime() });
+		rechargeTimer.start();
+	},
+
+	updateRechargeTime: function () {		
+		rechargeTime--;				
+		var time = new Date(rechargeTime * 1000).toISOString().substr(14, 5);				
+		rechargeTimeText.setText(time.toString());
+		if (rechargeTime < 1) {		
+			rechargeTimer.stop();
+			rechargeTime = rechargeTimeDefault;					
+			this.startRechargeTime();
+			
+			if (playerLife < 5) {
+				playerLife++;
+				playerLifeSprite.loadTexture('life'+playerLife);	
+			}				
+		}
 	},
 
 	getRandomInt: function(min, max) {
@@ -233,7 +265,9 @@ var worldState = {
 		this.displayCaption(isCorrect);		
 	},
 
-	displayCaption: function(isCorrect) {		
+	displayCaption: function(isCorrect) {	
+		background.loadTexture('bgans1');	
+
 		this.destroyGraphics(answerGroup);
 
 		var overlayGraphics = game.add.graphics(0, 0);			

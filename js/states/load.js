@@ -12,6 +12,7 @@ var loadState = {
 		game.load.image('bgmc1', 'assets/bg-mc-1.png');
 		game.load.image('bgtf1', 'assets/bg-tf-1.png');
 		game.load.image('bgyn1', 'assets/bg-yn-1.png');
+		game.load.image('bgans1', 'assets/bg-ans-1.png');
 
 		game.load.image('logo', 'assets/logo.png');
 		game.load.image('startbtn', 'assets/button-start.png');
