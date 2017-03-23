@@ -14,6 +14,7 @@ var loadState = {
 
 		game.load.image('map', 'assets/map.png?v=1');		
 
+		game.load.image('life0', 'assets/life-0.png?v=1');
 		game.load.image('life1', 'assets/life-1.png?v=1');
 		game.load.image('life2', 'assets/life-2.png?v=1');
 		game.load.image('life3', 'assets/life-3.png?v=1');
@@ -30,6 +31,6 @@ var loadState = {
 	},
 
 	create: function () {		
-		game.state.start('menu');
+		game.state.start('map');
 	}
 };

@@ -14,9 +14,7 @@ var worldState = {
 		    height: 200,
 		    borderwidth: 8,         
 		    radius: 20,
-		};
-
-		console.log(questionPanel)
+		};		
 
 		questionsJSON = game.cache.getJSON('questions');				
 		
@@ -32,12 +30,7 @@ var worldState = {
 		game.world.bringToTop(qaGroup);
 		game.world.bringToTop(answerGroup);
 		game.world.bringToTop(menuGroup);		
-	},	
-
-	restart: function () {		
-		getHighscores = false;
-		game.state.start('gameover');
-	},
+	},		
 
 	drawMenu: function() {
 		menuGroup = game.add.group();	
@@ -227,19 +220,11 @@ var worldState = {
 		// Correct
 		if (questionsJSON[questionIndex].answer == answer) {
 			isCorrect = 'Correct';
-			playerScore += 10;			
-			// Last question available
-			if (questionsJSON.length == 1) {
-				game.state.start('gameover');
-			}
+			playerScore += 10;						
 		}
 		// Incorrect
 		else {			
 			playerLife--;
-			// Gameover
-			if (playerLife < 1) {
-				game.state.start('gameover');
-			}
 			this.updatePlayerLife();
 		}				
 	
