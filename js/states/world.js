@@ -9,7 +9,7 @@ var worldState = {
 
 		questionPanel = {       
 		    x: (game.world.width * 0.15),
-		    y: (window.innerHeight * 0.1),
+		    y: (game.world.top + 175),
 		    width: game.world.width * 0.7,
 		    height: 200,
 		    borderwidth: 8,         
