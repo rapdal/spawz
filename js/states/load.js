@@ -2,6 +2,8 @@
 var loadState = {
 	preload: function () {		
 		game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+		game.scale.maxWidth = 1242;
+		game.scale.maxHeight = 2208;
 		game.scale.refresh();
 
 		game.load.image('bgmenu', 'assets/bg-menu.png');
