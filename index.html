@@ -13,26 +13,16 @@
     <script type="text/javascript" src="js/states/map.js"></script>
     <script type="text/javascript" src="js/states/world.js"></script>
     <script type="text/javascript" src="js/states/gameover.js"></script>
-    <style type="text/css">
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-        canvas {
-            position: absolute;
-        }
-        #input-box {                        
-            text-align: center;            
-            min-height: 1px;
-            position: absolute;            
-            z-index: 99;            
-        }
-        input {         
-            text-align: center;
-            width: 50%;
-            height: 100%;
-        }
-    </style>
+    
+    <link rel="stylesheet" type="text/css" href="assets/styles.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {                
+                families: ['Nunito']
+            }
+        });
+    </script>
 </head>
 <body>
 
@@ -45,7 +35,7 @@ var background;
 var mapSprite;
 var mapJSON;
 
-var questionTimeDefault = 10;
+var questionTimeDefault = 15;
 var questionTime = 0;
 var questionTimer = null;
 var questionTimerText = null;
@@ -53,8 +43,8 @@ var questionTimerText = null;
 var menuGroup;
 var playerName;
 var playerScore = 0;
-var playerScoreText = null;
 var playerLife = 5;
+var playerScoreText = null;
 var playerLifeSprite = null;
 
 var rechargeTimeDefault = 900;
@@ -72,7 +62,7 @@ var color1 = "0x3c2415";
 var color2 = "0xc49a6c";
 
 var fontFamily1 = "Arial";
-var fontFamily2 = "Arial";
+var fontFamily2 = "Nunito";
 
 var questionsJSON;
 var questionIndex;
@@ -89,6 +79,7 @@ var questionPanel = {
     borderwidth: 8,         
     radius: 20,
 };
+
 
 var game = new Phaser.Game(gameWidth, gameHeight, Phaser.CANVAS, 'gameArea');
 

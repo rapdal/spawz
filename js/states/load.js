@@ -26,6 +26,7 @@ var loadState = {
 		game.load.image('life5', 'assets/life-5.png?v=1');
 
 		game.load.image('level', 'assets/level.png?v=1');
+		game.load.image('mapend', 'assets/mapend.png?v=1');
 
 		game.load.image('iconCorrect', 'assets/icon-correct.png?v=1');
 		game.load.image('iconIncorrect', 'assets/icon-incorrect.png?v=1');

@@ -136,35 +136,38 @@ var mapState = {
 		this.drawMenu();
 
 		var overlayGraphics = game.add.graphics(0,0);
-		overlayGraphics.beginFill('black', 1);
+		overlayGraphics.beginFill('0x009999', 1);
 		overlayGraphics.drawRect(0, 0, game.world.width, game.world.height);
 		overlayGraphics.endFill();
-		overlayGraphics.alpha = 0.5;
+		overlayGraphics.alpha = 0.4;
 
 		var overlayText = game.add.text(0, 0, "More levels coming soon!",
-	    	{ font: fontFamily1, fontSize:'32px', fill:'#fff', boundsAlignH:'center', boundsAlignV:'middle',
+	    	{ font: fontFamily2, fontSize:'34px', fontWeight:"bolder", fill:'#fff', boundsAlignH:'center', boundsAlignV:'middle',
 	    	align:'center', wordWrap:true, wordWrapWidth: questionPanel.width-40 });
-	    overlayText.setTextBounds(game.camera.x, game.camera.y+50, game.world.width, 284);	    	    	    
+	    overlayText.setTextBounds(game.camera.x, game.camera.y+50, game.world.width, 284);	 
+
+	    var mapendSprite = game.add.sprite(game.camera.x+45, game.camera.y+300, 'mapend');  
+	    mapendSprite.scale.setTo(0.5, 0.5);
 	},
 
 	nolife: function () {
 		var nolifeGroup = game.add.group();
 
 		var overlayGraphics = game.add.graphics(0,0);
-		overlayGraphics.beginFill('black', 1);
+		overlayGraphics.beginFill('0x009999', 1);
 		overlayGraphics.drawRect(0, 0, game.world.width, game.world.height);
 		overlayGraphics.endFill();
 		overlayGraphics.alpha = 0.5;
 		nolifeGroup.add(overlayGraphics);
 
 	    var overlayText = game.add.text(0, 0, "No more life!",
-	    	{ font: fontFamily1, fontSize:'32px', fill:'#fff', boundsAlignH:'center', boundsAlignV:'middle',
+	    	{ font: fontFamily2, fontSize:'34px', fontWeight:"bolder", fill:'#fff', boundsAlignH:'center', boundsAlignV:'middle',
 	    	align:'center', wordWrap:true, wordWrapWidth: questionPanel.width-40 });
 	    overlayText.setTextBounds(game.camera.x, game.camera.y+50, game.world.width, 284);	    	    
 	    nolifeGroup.add(overlayText);
 
 	    var continueText = game.add.text(0, 0, 'Tap to continue...',
-			{ font: fontFamily2, fontSize:'18px', fill:'#fff', boundsAlignH:'center', boundsAlignV:'middle' });
+			{ font: fontFamily1, fontSize:'18px', fill:'#fff', boundsAlignH:'center', boundsAlignV:'middle' });
 		continueText.setTextBounds(game.camera.x, game.camera.y+304, game.world.width, 20);
 		nolifeGroup.add(continueText);
 		

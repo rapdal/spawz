@@ -68,7 +68,7 @@ var worldState = {
 		qaGroup.add(levelSprite);
 
 		var levelText = game.add.text(0, 0, gameLevel,
-			{ font:fontFamily2, fontSize:'24px', fill:'#fff', boundsAlignH:'center', boundsAlignV:'middle',
+			{ font:fontFamily1, fontSize:'24px', fill:'#fff', boundsAlignH:'center', boundsAlignV:'middle',
 	    	align:'center', wordWrap:true, wordWrapWidth: questionPanel.width-40 });
 	    levelText.setTextBounds(questionPanel.x+25, questionPanel.y-23, 25, 20);	    
 	    qaGroup.add(levelText);
@@ -88,7 +88,7 @@ var worldState = {
 
 	    var question = item.question;	
 	    var questionText = game.add.text(0, 0, question,
-	    	{ font: fontFamily1, fontSize:'20px', fill:'#fff', boundsAlignH:'center', boundsAlignV:'middle',
+	    	{ font: fontFamily2, fontSize:'20px', fill:'#fff', boundsAlignH:'center', boundsAlignV:'middle',
 	    	align:'center', wordWrap:true, wordWrapWidth: questionPanel.width-40 });
 	    questionText.setTextBounds(questionPanel.x+10, questionPanel.y, questionPanel.width-10, questionPanel.height-10);	    
 	    qaGroup.add(questionText);
@@ -173,12 +173,12 @@ var worldState = {
 	   	answerGroup.add(choiceGraphics);
 
 	    var choiceText = game.add.text(0, 0, choice,
-	    	{ font: fontFamily1, fontSize:'21px', fill:'#fff', boundsAlignV:'middle' });
+	    	{ font: fontFamily2, fontSize:'21px', fill:'#fff', boundsAlignV:'middle' });
 	    choiceText.setTextBounds(rectX+circleDiameter+5, rectY+2, rectWidth, rectHeight);
 	    answerGroup.add(choiceText);
 	    
 	    var keyText = game.add.text(0, 0, key,
-	    	{ font: fontFamily1, fontSize:'26px', fontWeight:'bolder', fill:"#fff", boundsAlignH:'center', boundsAlignV:'middle', align:'center' });
+	    	{ font: fontFamily2, fontSize:'26px', fontWeight:'bolder', fill:"#fff", boundsAlignH:'center', boundsAlignV:'middle', align:'center' });
 	    keyText.setTextBounds(circleX-circleRadius, circleY-circleRadius+2, circleDiameter, circleDiameter);	
 	    answerGroup.add(keyText);       	    
 	},
@@ -207,7 +207,7 @@ var worldState = {
 	    answerGroup.add(choiceGraphics);
 
 	    var keyText = game.add.text(0, 0, choice,
-	    	{ font:'26px Arial', fontWeight:'bolder', fill:"#fff", boundsAlignH:'center', boundsAlignV:'middle', align:'center' });
+	    	{ font: fontFamily2, fontSize:'24px', fontWeight:'bolder', fill:"#fff", boundsAlignH:'center', boundsAlignV:'middle', align:'center' });
 	    keyText.setTextBounds(circleX-circleRadius, circleY-circleRadius+2, circleDiameter, circleDiameter);	
 	   
 	    answerGroup.add(keyText);    		   	  
@@ -249,7 +249,7 @@ var worldState = {
 		}
 
 		var correctText = game.add.text(0, 0, isCorrect,
-			{ font: fontFamily1, fontSize:'32px', fontWeight:'bolder', fill:color1, boundsAlignH:'center', boundsAlignV:'middle',
+			{ font: fontFamily2, fontSize:'32px', fontWeight:'bolder', fill:color1, boundsAlignH:'center', boundsAlignV:'middle',
 			align:'center', wordWrap:true, wordWrapWidth:questionPanel.width-40 });		
 		correctText.setTextBounds(questionPanel.x, questionPanel.y+questionPanel.height-60, questionPanel.width, questionPanel.height/3);		
 		qaGroup.add(correctText);
@@ -271,7 +271,7 @@ var worldState = {
 	    qaGroup.add(captionGraphics);
 
 	    var captionText = game.add.text(0, 0, questionsJSON[questionIndex].caption,
-	    	{ font: fontFamily1, fontSize:'17px', fill:color1, boundsAlignH:'center', boundsAlignV:'middle',
+	    	{ font: fontFamily2, fontSize:'16px', fill:color1, boundsAlignH:'center', boundsAlignV:'middle',
 			align:'center', wordWrap:true, wordWrapWidth:questionPanel.width-40 });
 		captionText.setTextBounds(captionPanel.x, captionPanel.y+5, captionPanel.width, captionPanel.height);
 		qaGroup.add(captionText);	
