@@ -1,25 +1,64 @@
 [
 	{
+		"id": 1,
 		"x": 40,
 		"y": 4316,
 		"diameter": 52,
 		"up": false
 	},
 	{
+		"id": 2,
 		"x": 147.5,
 		"y": 4265,
 		"diameter": 52,
 		"up": false
 	},
 	{
+		"id": 3,
 		"x": 302.5,
 		"y": 4295,
 		"diameter": 52,
 		"up": false
 	},
 	{
+		"id": 4,
 		"x": 352,
-		"y": 4227,
+		"y": 4228,
+		"diameter": 52,
+		"up": false
+	},
+	{
+		"id": 5,
+		"x": 245,
+		"y": 4158,
+		"diameter": 52,
+		"up": false
+	},
+	{
+		"id": 6,
+		"x": 146,
+		"y": 4120,
+		"diameter": 52,
+		"up": false
+	},
+	{
+		"id": 7,
+		"x": 119,
+		"y": 4031,
+		"diameter": 52,
+		"up": false
+	},
+	{
+		"id": 8,
+		"x": 131,
+		"y": 3934,
+		"diameter": 52,
+		"up": false
+	},
+	{
+		"id": 9,
+		"x": 226,
+		"y": 3882,
 		"diameter": 52,
 		"up": false
 	}

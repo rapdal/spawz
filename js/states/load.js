@@ -30,6 +30,6 @@ var loadState = {
 	},
 
 	create: function () {		
-		game.state.start('map');
+		game.state.start('menu');
 	}
 };

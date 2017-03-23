@@ -1,18 +1,22 @@
 				
 var worldState = {
 	create: function() {	
+		game.camera.y = 0;
+
 		this.drawMenu();
 
 		questionTimer = game.time.events;
 
 		questionPanel = {       
 		    x: (game.world.width * 0.15),
-		    y: (game.world.height * 0.25),
+		    y: (window.innerHeight * 0.1),
 		    width: game.world.width * 0.7,
 		    height: 200,
 		    borderwidth: 8,         
 		    radius: 20,
 		};
+
+		console.log(questionPanel)
 
 		questionsJSON = game.cache.getJSON('questions');				
 		

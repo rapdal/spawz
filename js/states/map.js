@@ -2,7 +2,6 @@
 var mapState = {
 	create: function () {	
 		var bgHeight = (7350*game.world.width)/705;
-		console.log(bgHeight);
 
 		game.world.setBounds(0, 0, game.world.width, 50 + bgHeight);			
 		game.camera.y = bgHeight;
