@@ -66,8 +66,10 @@ var mapState = {
 			rechargeTime = rechargeTimeDefault;					
 			this.startRechargeTime();
 			
-			playerLife++;
-			playerLifeSprite.loadTexture('life'+playerLife);			
+			if (playerLife < 5) {
+				playerLife++;
+				playerLifeSprite.loadTexture('life'+playerLife);	
+			}				
 		}
 	},
 
