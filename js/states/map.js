@@ -19,6 +19,7 @@ var mapState = {
 	},
 
 	update: function () {
+		menuGroup.y = game.camera.y;
 		game.world.bringToTop(menuGroup);
 	},
 
@@ -37,6 +38,8 @@ var mapState = {
 
 		menuGroup.add(playerLifeSprite);
 		menuGroup.add(gameLevelText);	
+
+		menuGroup.fixedToCamera = true;
 	},
 
 	addLevels: function () {		

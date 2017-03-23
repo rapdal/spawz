@@ -28,6 +28,7 @@ var worldState = {
 	},	
 
 	update: function() {	
+		menuGroup.y = game.camera.y;
 		game.world.bringToTop(qaGroup);
 		game.world.bringToTop(answerGroup);
 		game.world.bringToTop(menuGroup);		
