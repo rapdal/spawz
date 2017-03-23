@@ -58,11 +58,13 @@ var worldState = {
 	generateQA: function() {		
 		qaGroup = game.add.group();	
 		answerGroup = game.add.group();
-		questionIndex = this.getRandomInt(0, questionsJSON.length);		
+		questionIndex = this.getRandomInt(0, questionsJSON.length);			
 		this.addQuestion(questionsJSON[questionIndex]);	
 	},
 
 	addQuestion: function(item) {	
+		background.loadTexture('bg'+item.type+'1');	
+
 		var levelSprite = game.add.sprite(questionPanel.x+10, questionPanel.y-50, 'level');
 		levelSprite.width = 58; levelSprite.height = 50;
 		qaGroup.add(levelSprite);
